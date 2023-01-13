@@ -3,13 +3,12 @@
 # Created by: Ioannis Oikonomidis
 #-------------------------------------------------------------------------------
 
-#' Prometheus File Classes
+#' @title Prometheus File Classes
 #'
 #' @slot prm character. The parameter file name.
 #' @slot dts character. The dataset file name.
 #'
-#' @return An S4 object of class \code{PrometheusFiles} or one of its
-#' subclasses.
+#' @return An S4 object of class `PrometheusFiles` or one of its subclasses.
 #'
 #' @export
 #'

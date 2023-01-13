@@ -1,15 +1,18 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# <img src="inst/logo/logo_full.png" height="70px" alt="logo"/>
+# agesofman <img src='man/figures/logo.png' align="right" height="139" alt="logo"/>
 
 <!-- badges: start -->
+
+[![CRAN
+status](https://www.r-pkg.org/badges/version/agesofman)](https://CRAN.R-project.org/package=agesofman)
+[![R-CMD-check](https://github.com/agesofman/agesofman/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/agesofman/agesofman/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Introduction
 
-The *prometheus* project is developed in the Mathematics Department of
-the University of Athens. It applies advanced statistical methodology on
+The *Ages of Man* project applies advanced statistical methodology on
 remote sensing agriculture. It is composed of several R packages, as
 well as other elements, each one focusing on a different application.
 
@@ -27,30 +30,37 @@ well as other elements, each one focusing on a different application.
 
 ## Installation
 
-You can install the development version of *prometheus* from github by
+You can install the development version of *agesofman* from github by
 running the following line of code:
 
 ``` r
- devtools::install_github("thechibo/prometheus")
+ devtools::install_github("agesofman/agesofman")
 ```
 
-All packages of the prometheus family will be automatically installed.
+All packages of the *Ages of Man* will be automatically installed.
 Although not necessary, it is strongly recommended to download *hermes*,
 which contains many executable examples, that can help users get
-familiar with the project. *hermes* can be downloaded to a specified
-directory by using the `download_hermes()` function.
-
-``` r
- library(prometheus)
- download_hermes(dir = getwd())
-```
+familiar with the project.
 
 More details on *hermes* can be found in
-<https://github.com/thechibo/hermes> .
+`vignette(topic = "hermes", package = "agesofman")`.
+
+## Documentation
+
+Detailed documentation, along with reproducible examples, can be found
+in the package vignettes.
+
+``` r
+vignette(topic = "agesofman", package = "agesofman")
+vignette(topic = "hermes", package = "agesofman")
+```
 
 ## Team
 
-The *prometheus* project is developed in the [Mathematics
+The *Ages of Man* project is developed in the [Mathematics
 Department](https://en.math.uoa.gr/ "Mathematics Department Homepage")
 of the [University of
-Athens](https://en.uoa.gr/ "University of Athens Homepage").
+Athens](https://en.uoa.gr/ "University of Athens Homepage"). The project
+maintainer is [Ioannis
+Oikonomidis](http://users.uoa.gr/~goikon/ "Ioannis Oikonomidis Homepage"),
+working under the supervision of Prof. Samis Trevezas.

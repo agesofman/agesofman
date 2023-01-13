@@ -13,11 +13,9 @@ create(files, ...)
 \item{files}{an S4 object of class \code{Files}.}
 
 \item{...}{extra arguments.}
-
-\item{dir}{character. The parent directory in which the files are stored.}
 }
 \value{
-An S4 object of class "Project"ModelList
+An S4 object of class "Project"ModelList.
 }
 \description{
 Function \code{create()} takes a \code{files} argument that

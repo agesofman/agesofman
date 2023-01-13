@@ -2,11 +2,25 @@
 % Please edit documentation in R/attach.R
 \name{core_unloaded}
 \alias{core_unloaded}
+\alias{same_library}
+\alias{agesofman_attach}
+\alias{.onAttach}
 \title{Load Packages}
 \usage{
 core_unloaded()
+
+same_library(pkg)
+
+agesofman_attach()
+
+.onAttach(...)
+}
+\arguments{
+\item{pkg}{character. The package names.}
+
+\item{...}{extra arguments.}
 }
 \description{
-This set of functions mimics the tidyverse behavior in order to
-load the Prometheus family of packages.
+This set of functions mimics the \code{tidyverse} behavior in order
+to load the \code{agesofman} family of packages.
 }

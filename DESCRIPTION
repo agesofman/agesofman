@@ -1,6 +1,6 @@
 Package: agesofman
 Title: Remote Sensing Statistical Applications in Agriculture
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: c(
     person(given = "Ioannis", family = "Oikonomidis",
            email = "goikon@math.uoa.gr", role = c("aut", "cre"),
@@ -9,13 +9,22 @@ Authors@R: c(
            email = "strevezas@math.uoa.gr", role = c("aut", "ths")))
 Description: The Ages of Man project applies advanced statistical
     methodology on remote sensing agriculture.
+Language: en-US
 License: GPL (>= 3)
 Depends: 
-    R (>= 2.10)
-Imports: 
-    cronus (>= 0.0.1),
-    methods,
+    R (>= 2.10),
+    cronus (>= 0.0.3),
     persephone (>= 0.0.1)
+Imports: 
+    methods,
+    rprojroot,
+    usethis
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.2
+RoxygenNote: 7.2.3
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+VignetteBuilder: knitr

@@ -4,3 +4,7 @@
 ^inst/logo
 ^LICENSE\.md$
 ^\.github$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^cran-comments\.md$

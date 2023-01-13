@@ -21,13 +21,20 @@ read_dts(name, project, dir = getwd())
 
 \item{dir}{character. The hermes project directory.}
 }
-\value{
-read_exe sources the script, while read_prm and read_dts source
-the script locally and only return the prm and dts objects, respectively.
-}
 \description{
-Read scripts
+This set of functions sources scripts inside the structured
+directory of the \code{hermes} project and returns an appropriate object. These
+functions are used in the model creation process.
 }
+\section{Functions}{
+\itemize{
+\item \code{read_exe()}: source the script.
+
+\item \code{read_prm()}: source the script locally and return object \code{prm}.
+
+\item \code{read_dts()}: source the script locally and return object \code{dts}.
+
+}}
 \examples{
 \dontrun{
 read_prm("test", "persephone")

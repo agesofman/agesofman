@@ -1,0 +1,22 @@
+---
+title: "hermes"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{hermes}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+`hermes` can be downloaded to a specified directory by using the `download_hermes()` function.
+
+```{r, eval = FALSE}
+ library(agesofman)
+ download_hermes(dir = getwd())
+```

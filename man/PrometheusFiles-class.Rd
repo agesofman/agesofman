@@ -8,8 +8,7 @@
 \alias{PersephoneFiles}
 \title{Prometheus File Classes}
 \value{
-An S4 object of class \code{PrometheusFiles} or one of its
-subclasses.
+An S4 object of class \code{PrometheusFiles} or one of its subclasses.
 }
 \description{
 Prometheus File Classes
