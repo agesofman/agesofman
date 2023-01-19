@@ -6,7 +6,7 @@
 \alias{read_dts}
 \title{Read scripts}
 \usage{
-read_exe(name, type, project, dir = getwd())
+read_exe(name, project, dir = getwd())
 
 read_prm(name, project, dir = getwd())
 
@@ -14,8 +14,6 @@ read_dts(name, project, dir = getwd())
 }
 \arguments{
 \item{name}{character. The name of the script (without the .R suffix).}
-
-\item{type}{character. The type of the script}
 
 \item{project}{character. The project the script concerns.}
 
@@ -37,6 +35,15 @@ functions are used in the model creation process.
 }}
 \examples{
 \dontrun{
-read_prm("test", "persephone")
+# Set path
+path_hermes <- getwd()
+
+# Download project
+download_hermes(path_hermes)
+
+# Read files
+read_exe("test", "persephone", dir = path_hermes)
+prm <- read_prm("test", "persephone", dir = path_hermes)
+dts <- read_dts("test", "persephone", dir = path_hermes)
 }
 }

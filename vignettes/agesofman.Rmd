@@ -14,6 +14,65 @@ knitr::opts_chunk$set(
 )
 ```
 
+## Overview
+
+This vignette contains general information on the package. It is intended to give the user a general picture of the package features, presenting the code architecture in a clear and concise way.
+
+The main purpose of `agesofman` is to automatically attach all packages included in the *Ages of Man* project. The package also includes a number of functions that provide enhanced functionality to the *Ages of Man* project. Although not necessary, it is strongly recommended to download `hermes`, which contains executable examples that can help users get familiar with the project.
+
 ```{r setup}
 library(agesofman)
+```
+
+## hermes
+
+*hermes* is an R project that stores files. It includes the necessary executable scripts that the *Ages of Man* core team members use in their research, as well as the results (reports, plots etc) generated.
+
+### Download
+
+The project can be downloaded from the [hermes github repository](https://github.com/agesofman/agesofman "hermes github repository"), or with the `download_hermes()` function included in the `agesofman` package.
+
+```{r eval = FALSE}
+path_hermes <- getwd()
+download_hermes(path_hermes)
+```
+
+### Project path
+
+In order to avoid specifying the project path in every single function call, a variable named `path_hermes` can be added to the environment variables, stored in the user .Renviron file. This allows the user to specify only once the project path, which will load in the beginning of every R session. Function `set_path_hermes()` can be used to specify or change the path. A similar function named `set_path_demeter()` from the `cronus` package can be used to set the database path. Alternatively, function `set_agesofman()` can be used to define both paths.
+
+```{r eval = FALSE}
+set_path_hermes(path = path_hermes)
+get_path_hermes()
+set_agesofman(path_demeter = tempdir(), path_hermes = path_hermes)
+```
+
+### Project structure
+
+A folder named `projects` exists in `hermes` root directory, holding a collection of subfolders named after the corresponding project. 
+
+Scripts named `configuration.R` contain necessary code to make other R scripts functionable, such as `library()` calls.
+
+The structure of each project folder is the following:
+- `dts`: Includes executable R scripts that load data from *Demeter*.
+- `exe`: Includes executable R scripts that can be used to perform most of the tasks the package was designed to do.
+- `prm`: Includes executable R scripts that define the necessary model parameters.
+- `output`: Includes the output of functions, such as plots and reports.
+- `panel`: Includes shiny applications.
+
+### File execution
+
+A set of functions named `read_*()` can be employed to automatically source files.
+
+```{r eval = FALSE}
+read_exe("test", "persephone", dir = path_hermes)
+prm <- read_prm("test", "persephone", dir = path_hermes)
+dts <- read_dts("test", "persephone", dir = path_hermes)
+```
+
+Function `create()` can be used instead to create an object of interest. It takes a single argument of class "Project"Files (e.g. `PersephoneFiles`) that includes the file names to be passed to the `read_*()` family of functions. The object created is ready to be used with the corresponding package functions.
+
+```{r eval = FALSE}
+files <- PersephoneFiles(prm = "test", dts = "test")
+object <- create(files)
 ```

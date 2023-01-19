@@ -25,7 +25,16 @@
 #'
 #' @examples
 #' \dontrun{
+#' # Set path
+#' path_hermes <- getwd()
+#' 
+#' # Download project
+#' download_hermes(path_hermes)
+#' 
+#' # Create files object
 #' files <- PersephoneFiles(prm = "test", dts = "test")
+#' 
+#' # Create model object
 #' object <- create(files)
 #' }
 setGeneric("create", signature = c("files"),

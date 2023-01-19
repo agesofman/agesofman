@@ -1,3 +1,12 @@
+# agesofman 0.0.3
+
+* Added vignettes.
+* Added function examples.
+* Added tests.
+* Created a documentation website with `pkgdown` and github-pages.
+* Changed `tempdir()` into `getwd()` in examples and tests due to bug.
+* Added codecov badge.
+
 # agesofman 0.0.2
 
 * Added a `NEWS.md` file to track changes to the package.

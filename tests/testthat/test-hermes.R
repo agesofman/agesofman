@@ -1,4 +1,4 @@
-test_that("create works", {
+test_that("hermes download works", {
   
   # Set path
   path_hermes <- file.path(tempdir(), "hermes-main")
@@ -10,14 +10,6 @@ test_that("create works", {
   
   # Download project
   expect_no_error(download_hermes(tempdir()))
-  
-  # Create files object
-  files <- PersephoneFiles(prm = "test", dts = "test")
-  expect_s4_class(files, "PersephoneFiles")
-  
-  # Create model object
-  object <- create(files)
-  expect_s3_class(object, "PersephoneModelList")
   
   # Delete project
   unlink(path_hermes, recursive = TRUE, force = TRUE)

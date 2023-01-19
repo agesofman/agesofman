@@ -10,7 +10,6 @@
 #' functions are used in the model creation process.
 #' 
 #' @param name character. The name of the script (without the .R suffix).
-#' @param type character. The type of the script
 #' @param project character. The project the script concerns.
 #' @param dir character. The hermes project directory.
 #'
@@ -20,10 +19,19 @@
 #'
 #' @examples
 #' \dontrun{
-#' read_prm("test", "persephone")
+#' # Set path
+#' path_hermes <- getwd()
+#' 
+#' # Download project
+#' download_hermes(path_hermes)
+#' 
+#' # Read files
+#' read_exe("test", "persephone", dir = path_hermes)
+#' prm <- read_prm("test", "persephone", dir = path_hermes)
+#' dts <- read_dts("test", "persephone", dir = path_hermes)
 #' }
-read_exe <- function(name, type, project, dir = getwd()) {
-  path <- file.path(dir, project, type, paste0(name, ".R"))
+read_exe <- function(name, project, dir = getwd()) {
+  path <- file.path(dir, "projects", project, "exe", paste0(name, ".R"))
   source(path)
 }
 
@@ -31,7 +39,7 @@ read_exe <- function(name, type, project, dir = getwd()) {
 #' @export
 read_prm <- function(name, project, dir = getwd()) {
   prm <- NULL
-  path <- file.path(dir, project, "prm", paste0(name, ".R"))
+  path <- file.path(dir, "projects", project, "prm", paste0(name, ".R"))
   source(path, local = TRUE)
   prm
 }
@@ -40,7 +48,7 @@ read_prm <- function(name, project, dir = getwd()) {
 #' @export
 read_dts <- function(name, project, dir = getwd()) {
   dts <- NULL
-  path <- file.path(dir, project, "dts", paste0(name, ".R"))
+  path <- file.path(dir, "projects", project, "dts", paste0(name, ".R"))
   source(path, local = TRUE)
   dts
 }

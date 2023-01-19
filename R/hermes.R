@@ -17,7 +17,17 @@
 #'
 #' @examples
 #' \dontrun{
-#' download_hermes()
+#' # Set path
+#' path_hermes <- getwd()
+#'  
+#' # Download project
+#' download_hermes(path_hermes)
+#' 
+#' # Create files object
+#' files <- PersephoneFiles(prm = "test", dts = "test")
+#' 
+#' # Create model object
+#' object <- create(files)
 #' }
 download_hermes <- function(dir = getwd()) {
   url <- 'https://github.com/agesofman/hermes/archive/master.zip'
