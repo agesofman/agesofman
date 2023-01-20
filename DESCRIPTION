@@ -1,6 +1,6 @@
 Package: agesofman
 Title: Remote Sensing Statistical Applications in Agriculture
-Version: 0.0.3
+Version: 0.0.4
 Authors@R: c(
     person(given = "Ioannis", family = "Oikonomidis",
            email = "goikon@math.uoa.gr", role = c("aut", "cre"),
@@ -12,9 +12,9 @@ Description: The Ages of Man project applies advanced statistical
 Language: en-US
 License: GPL (>= 3)
 Depends: 
-    R (>= 2.10),
-    cronus (>= 0.0.4),
-    persephone (>= 0.0.2)
+    R (>= 4.0.0),
+    cronus (>= 0.0.5),
+    persephone (>= 0.0.3)
 Imports:
     methods,
     usethis
@@ -26,5 +26,8 @@ Suggests:
     knitr,
     rmarkdown,
     testthat (>= 3.0.0)
+Remotes: 
+    github::agesofman/cronus
+    github::agesofman/persephone
 Config/testthat/edition: 3
 VignetteBuilder: knitr

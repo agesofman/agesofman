@@ -42,11 +42,7 @@ You can install the development version of `agesofman` from github by running th
 
 ## Documentation
 
-Detailed documentation, along with reproducible examples, can be found in the package vignette.
-
-```{r}
-vignette(topic = "agesofman", package = "agesofman")
-```
+Detailed documentation, along with reproducible examples, can be found in the package vignette `vignette(topic = "agesofman", package = "agesofman")`.
 
 ## Team
 

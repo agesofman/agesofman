@@ -1,3 +1,9 @@
+# agesofman 0.0.4
+
+* Fixed bug in tests.
+* Updated minimum R version in DESCRIPTION.
+* Added Remotes field in DESCRIPTION.
+
 # agesofman 0.0.3
 
 * Added vignettes.

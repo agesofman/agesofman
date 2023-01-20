@@ -41,11 +41,8 @@ running the following line of code:
 ## Documentation
 
 Detailed documentation, along with reproducible examples, can be found
-in the package vignette.
-
-``` r
-vignette(topic = "agesofman", package = "agesofman")
-```
+in the package vignette
+`vignette(topic = "agesofman", package = "agesofman")`.
 
 ## Team
 

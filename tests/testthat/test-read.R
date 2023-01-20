@@ -1,10 +1,12 @@
 test_that("read works", {
   
-  # Download project
-  expect_no_error(download_hermes(tempdir()))
-  
   # Set path
   path_hermes <- file.path(tempdir(), "hermes-main")
+  path_hermes_zip <- file.path(tempdir(), "hermes-main.zip")
+  
+  # Delete project
+  unlink(path_hermes, recursive = TRUE, force = TRUE)
+  unlink(path_hermes_zip, recursive = TRUE, force = TRUE)
   
   # Read files
   prm <- read_prm("test", "persephone", dir = path_hermes)
@@ -18,5 +20,6 @@ test_that("read works", {
   
   # Delete project
   unlink(path_hermes, recursive = TRUE, force = TRUE)
+  unlink(path_hermes_zip, recursive = TRUE, force = TRUE)
   
 })

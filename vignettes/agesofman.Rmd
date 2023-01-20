@@ -51,7 +51,7 @@ set_agesofman(path_demeter = tempdir(), path_hermes = path_hermes)
 
 A folder named `projects` exists in `hermes` root directory, holding a collection of subfolders named after the corresponding project. 
 
-Scripts named `configuration.R` contain necessary code to make other R scripts functionable, such as `library()` calls.
+Scripts named `configuration.R` contain necessary code to run other R scripts, such as `library()` calls.
 
 The structure of each project folder is the following:
 - `dts`: Includes executable R scripts that load data from *Demeter*.
