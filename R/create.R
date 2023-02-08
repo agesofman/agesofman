@@ -48,17 +48,22 @@ setMethod("create",
   # Read the files
   prm <- read_prm(name = files@prm, project = "persephone", dir = files@dir)
   dts <- read_dts(name = files@dts, project = "persephone", dir = files@dir)
-  args <- c(prm, dts, FUN = "new")
-
+  
+  # Create arguments
+  args <- c(prm, dts)
+  combs <- as.list(expand.grid(args, stringsAsFactors = FALSE))
+  combs$label <- paste0(names(combs$formula), "_", combs$link)
+  combs$crop <- names(combs$data)
+  
   # Create the model
-  y <- do.call(mapply, args)
+  y <- do.call(mapply, c(combs, FUN = "new"))
   if (length(y) == 1) {
     y <- y[[1]]
   } else {
     class(y) <- "PersephoneModelList"
+    names(y) <- get_label(y)
   }
-  names(y) <- get_crops(y)
-
+  
   y
 
 })

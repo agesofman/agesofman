@@ -30,8 +30,11 @@ set_path_hermes <- function(path) {
 #' @rdname set_path_hermes
 #' @export
 get_path_hermes <- function() {
+  path_renviron <- cronus::get_startup_path(type = "environ")
   path_hermes <- NULL
-  source(cronus::get_startup_path(type = "environ"), local = TRUE)
+  if (file.exists(path_renviron)) {
+    source(path_renviron, local = TRUE) 
+  }
   path_hermes
 }
 

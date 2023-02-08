@@ -1,3 +1,11 @@
+# agesofman 0.0.6
+
+* Fixed bug in tests.
+
+# agesofman 0.0.5
+
+* Updated `create()` function.
+
 # agesofman 0.0.4
 
 * Fixed bug in tests.
