@@ -1,6 +1,6 @@
 Package: agesofman
 Title: Remote Sensing Statistical Applications in Agriculture
-Version: 0.0.6
+Version: 0.0.7
 Authors@R: c(
     person(given = "Ioannis", family = "Oikonomidis",
            email = "goikon@math.uoa.gr", role = c("aut", "cre"),

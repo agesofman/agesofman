@@ -12,7 +12,7 @@ test_that("create works", {
   expect_no_error(download_hermes(tempdir()))
   
   # Create files object
-  files <- PersephoneFiles(prm = "Bin", dts = "complete", dir = path_hermes)
+  files <- PersephoneFiles(prm = "test", dts = "test", dir = path_hermes)
   expect_s4_class(files, "PersephoneFiles")
   
   # Create model object

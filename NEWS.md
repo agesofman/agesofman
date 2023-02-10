@@ -1,3 +1,7 @@
+# agesofman 0.0.7
+
+* Fixed bug in tests.
+
 # agesofman 0.0.6
 
 * Fixed bug in tests.

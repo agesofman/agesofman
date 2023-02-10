@@ -12,8 +12,8 @@ test_that("PersephoneFiles works", {
   expect_no_error(download_hermes(tempdir()))
   
   # Read files
-  prm <- read_prm("Bin", "persephone", dir = path_hermes)
-  dts <- read_dts("complete", "persephone", dir = path_hermes)
+  prm <- read_prm("test", "persephone", dir = path_hermes)
+  dts <- read_dts("test", "persephone", dir = path_hermes)
   
   # Check Variables
   vars_dts <- c("region", "data")
@@ -22,7 +22,7 @@ test_that("PersephoneFiles works", {
   expect_true(min(vars_prm %in% names(prm)) == 1)
   
   # Create files object
-  files <- PersephoneFiles(prm = "Bin", dts = "complete", dir = path_hermes)
+  files <- PersephoneFiles(prm = "test", dts = "test", dir = path_hermes)
   expect_s4_class(files, "PersephoneFiles")
   
   # Create model object

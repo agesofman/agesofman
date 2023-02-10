@@ -12,8 +12,8 @@ test_that("read works", {
   download_hermes(tempdir())
   
   # Read files
-  prm <- read_prm("Bin", "persephone", dir = path_hermes)
-  dts <- read_dts("complete", "persephone", dir = path_hermes)
+  prm <- read_prm("test", "persephone", dir = path_hermes)
+  dts <- read_dts("test", "persephone", dir = path_hermes)
   
   # Check Variables
   vars_dts <- c("region", "data")
