@@ -40,10 +40,6 @@ You can install the development version of `agesofman` from github by running th
  devtools::install_github("agesofman/agesofman")
 ```
 
-## Documentation
-
-Detailed documentation, along with reproducible examples, can be found in the package vignette `vignette(topic = "agesofman", package = "agesofman")`.
-
 ## Team
 
 The *Ages of Man* project is developed in the 

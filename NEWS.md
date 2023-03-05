@@ -1,3 +1,11 @@
+# agesofman 0.1.0
+
+* `hermes` structure is simplified and relevant functions moved to cronus.
+* `Files` are no longer used.
+* `prm` and `dts` are no longer used.
+* Function `combine` was moved to package `cronus`.
+* Function `create` was moved to package `persephone`.
+
 # agesofman 0.0.7
 
 * Fixed bug in tests.
